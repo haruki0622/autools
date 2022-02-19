@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NR5F8LKD1R");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NR5F8LKD1R"
+    ></script>
     <title>Autools</title>
   </head>
   <body>
@@ -37,7 +51,9 @@
             <li class="hum_item"><a href="#prices">金額</a></li>
             <li class="hum_item"><a href="#implement">導入方法</a></li>
             <li class="hum_item"><a href="#contact">お問い合わせ</a></li>
-            <li class="hum_item"><a href="https://portfolio.haru-haru0.com/">会社概要</a></li>
+            <li class="hum_item">
+              <a href="https://portfolio.haru-haru0.com/">会社概要</a>
+            </li>
           </ul>
         </div>
       </header>
@@ -52,7 +68,10 @@
               <p>私達は自動化ツールを作成しています。</p>
             </div>
             <div class="points_img">
-              <video src="./movie/movie.mp4" loop autoplay="true" muted></video>
+              <!-- <video src="./movie/movie.mp4" loop autoplay="true" muted></video> -->
+              <video playsinline autoplay muted loop>
+                <source src="./movie/movie.mp4" />
+              </video>
               <ul>
                 <li>●</li>
                 <li>●</li>
@@ -271,11 +290,11 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $(function(){
-        $("#hum_btn").on("click", function(){
-          $("#hum_list,.hum_bar").toggleClass("show")
-        })
-      })
+      $(function () {
+        $("#hum_btn").on("click", function () {
+          $("#hum_list,.hum_bar").toggleClass("show");
+        });
+      });
     </script>
   </body>
 </html>
